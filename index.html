@@ -292,10 +292,10 @@
 
         <div class="row justify-content-center">
           <div class="col-md-9 col-lg-6">
-            <form class="form-inline" method="POST" action="#">
+            <form class="form-inline" method="POST" action="#" name="news_form" id="news_form">
 
-              <input type="email" class="form-control " placeholder="Correo Electronico" name="email">
-              <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
+              <input type="email" class="form-control " placeholder="Correo Electronico" name="news_email" id="news_email">
+              <button id="btn-news" name="btn-news" type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
 
             </form>
 
@@ -374,7 +374,7 @@
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="Mensaje" rows="5" data-rule="required" data-msg="Por favor, escribe algo para nosotros" placeholder="Message"></textarea>
+                <textarea class="form-control" name="mensaje" id="mensaje" rows="5" data-rule="required" data-msg="Por favor, escribe algo para nosotros" placeholder="Message"></textarea>
                 <div class="validation"></div>
               </div>
               <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
@@ -510,7 +510,9 @@
           <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-        <div class="row">
+        
+        <form action="" name="form_cotiza" id="form_cotiza">
+          <div class="row">
          <div class="col-md-12">
           <h3 class="text-center">¡Cuentanos!</h3>
           </div>
@@ -518,14 +520,14 @@
           <div class="col-md-12 col-lg-12">
           
             <label>1. ¿Que servicio requieres?</label><br>
-            <input type="checkbox" class="form"><span> Diseño y desarrollo de aplicaciones Web</span><br>
-            <input type="checkbox" class="form"><span> Soporte tecnico</span><br>
-            <input type="checkbox" class="form"><span> Servicio Digital</span><br>
+            <input type="checkbox" name="service_val" id="service_val1" class="form"><span> Diseño y desarrollo de aplicaciones Web</span><br>
+            <input type="checkbox" name="service_val" id="service_val2" class="form"><span> Soporte tecnico</span><br>
+            <input type="checkbox" name="service_val" id="service_val3" class="form"><span> Servicio Digital</span><br>
             
             <div class="row">
               <div class="col">
                 <label for="">Más Información</label>
-                <textarea name="" class="form-control" maxlength="2000" placeholder="Ingresa más información acerca del servicio que desea adquirir" id="" cols="30" rows="10"></textarea>
+                <textarea name="mas_info" id="mas_info" class="form-control" maxlength="2000" placeholder="Ingresa más información acerca del servicio que desea adquirir" id="" cols="30" rows="10"></textarea>
               </div>
             </div>
           </div>
@@ -535,44 +537,42 @@
             <div class="row">
               <div class="col-md-12 col-lg-6">
                 <label for="">Nombre*</label>
-                <input type="text" placeholder="Ingrese su Nombre" class="form-control">
+                <input name="nombre_val" id="nombre_val" type="text" placeholder="Ingrese su Nombre" class="form-control">
                 
               </div>
               <div class="col-md-12 col-lg-6">
                 <label for="">Apellidos*</label>
-                <input type="text" placeholder="Ingrese su Apellido" class="form-control">
+                <input name="apellido_val" id="apellido_val" type="text" placeholder="Ingrese su Apellido" class="form-control">
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 col-lg-6">
                 <label for="">Correo Electronico*</label>
-                <input type="email" class="form-control" placeholder="Ingrese Su correo electronico">
+                <input name="email_val" id="email_val" type="email" class="form-control" placeholder="Ingrese Su correo electronico">
               </div>
               <div class="col-md-12 col-lg-6">
                 <label for="">Numero de contacto*</label>
-                <input type="number" placeholder="987654321" class="form-control">
+                <input name="contact_val" id="contact_val" type="number" placeholder="987654321" class="form-control">
               </div>
               <div class="col-md-12 col-lg-6">
                 <label for="">Empresa o Pyme</label>
-                <input type="text" placeholder="Ingrese el nombre de su empresa o Pyme" class="form-control">
+                <input name="empresa_val" id="emprea_val" type="text" placeholder="Ingrese el nombre de su empresa o Pyme" class="form-control">
               </div>
               <div class="col-md-12 col-lg-6">
                 <label for="">Presupuesto*</label>
-                <input type="number" class="form-control" placeholder="Ejemplo: 50000">
+                <input id="presupuesto" name="presupuesto" type="number" class="form-control" placeholder="Ejemplo: 50000">
               </div>
             </div>
             
             <div class="row">
-            </div>
-            
-            <div class="row">
-              <div class="col">
-                <button class="btn-outline-success">Cotizar</button>
+              <div class="col d-flex justify-content-end">
+                <button id="btn-cot" name="btn-cot" type="submit" class="btn-cot">Cotizar</button>
               </div>
             </div>
             
           </div>
         </div>
+        </form>
         </div>
       </div>
     </div>
@@ -596,6 +596,8 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script src="js/favicons.js"></script>
+  <script src="js/sweetalert2.all.min.js"></script>
+  <script src="js/toastify.js"></script>
 
 </body>
 </html>

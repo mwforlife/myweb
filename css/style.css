@@ -1362,3 +1362,33 @@ body.mobile-nav-active #mobile-nav-toggle i {
   letter-spacing: 0;
   color: #71c55d;
 }
+
+.btn-cot{
+ font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 11px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #71c55d;
+  background: #fff;
+  color: #71c55d;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn-cot:hover{
+ background: #71c55d;
+  color: #fff;
+}
+
+#presupuesto{
+  background-image: url(../img/svg/dolar.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 25px;
+}
+

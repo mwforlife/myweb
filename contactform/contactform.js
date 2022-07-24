@@ -101,13 +101,10 @@ jQuery(document).ready(function($) {
       success: function(msg) {
         // alert(msg);
         if (msg == 'OK') {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
+          $("#contactForm")[0].reset();
+          swal.fire("¡Felicidades!","Mensaje enviado correctamente","success");
         } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
+          swal.fire("¡Error!","Error al enviar el mensaje \n "+msg,"error");
         }
 
       }
